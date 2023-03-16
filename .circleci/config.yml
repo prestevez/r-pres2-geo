@@ -3,7 +3,7 @@ version: 2.1
 executors:
   docker-publisher:
     environment:
-      IMAGE_NAME: prestevez/r-pres2
+      IMAGE_NAME: prestevez/r-pres2-geo
     docker:
       - image: cimg/base:stable
         auth:
