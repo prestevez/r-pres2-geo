@@ -38,18 +38,18 @@ workflows:
               only: main
           context:
               - authentication
-  weekly:
-      triggers:
-          - schedule:
-              cron: 0 3 * * 1
-              filters:
-                branches:
-                  only: master
-      jobs:
-        - build-and-push:
-            filters:
-              branches:
-                only: master
-            context:
-                - authentication
+#  weekly:
+#      triggers:
+#          - schedule:
+#              cron: 0 3 * * 1
+#              filters:
+#                branches:
+#                  only: main
+#      jobs:
+#        - build-and-push:
+#            filters:
+#              branches:
+#                only: main
+#            context:
+#                - authentication
 ## CRON job should be changed to first check if there are differences, then tagged using a flag for CRON job
